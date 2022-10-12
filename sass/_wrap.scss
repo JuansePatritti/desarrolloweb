@@ -1,0 +1,22 @@
+.wrap {
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 35px;
+    grid-template-areas:
+        "header"
+        "contenidogral"
+        "segundocontainer"
+        "footer"
+        ;
+}
+
+.wrap__mkt{
+  @extend .wrap;
+    grid-template-areas:
+        "header"
+        "contenidogral__mkt"
+        "segundocontainer__mkt"
+        "footer";
+}
