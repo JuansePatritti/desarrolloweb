@@ -83,6 +83,9 @@ footer{
 img{ 
     width: 28em;
 }
+.img__quienso1y{
+    width: 30%;
+}
 div img{
     box-shadow: 0px 0px 25px -3px;
    }
@@ -177,9 +180,14 @@ label{
     gap: 3em;
     background-color: $black;
     padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 .img__quiensoy{
     width: 60%;
+}
+.img__quiensoy1{
+    width: 30%;
 }
 
 .row{
@@ -440,6 +448,9 @@ footer{
         padding: 2em;
         gap: 0em;
         background-color: $white;
+    }
+    .img__quiensoy1{
+        width: 30%;
     }
 }   
 @media (min-width:1200px) {
