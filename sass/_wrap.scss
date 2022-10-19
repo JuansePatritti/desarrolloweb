@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 35px;
+    background-color: $white;
     grid-template-areas:
         "header"
         "contenidogral"
@@ -19,4 +20,12 @@
         "contenidogral__mkt"
         "segundocontainer__mkt"
         "footer";
+}
+.wrap__quiensoy{
+  @extend .wrap;
+  grid-template-areas:
+  "header"
+  "contenidogral__quiensoy"
+  "segundocontainer__quiensoy"
+  "footer";
 }
