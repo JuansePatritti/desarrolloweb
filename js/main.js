@@ -183,7 +183,8 @@ let camaras = [
   { marca: "SONY", modelo: "a7", precio: 1400 },
 ];
 
-/*console.log(camaras);
+console.log(camaras);
+/*
 let preciosConIVA = camaras.map((unaCamara) => {
   return { ...unaCamara, precio: unaCamara.precio * 1.21 };
 });
