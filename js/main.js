@@ -23,7 +23,7 @@ else
  }*/
 
 //Ejercicio 1ra Entrega
-let opciones;
+/*let opciones;
 let username = prompt(
   "Hola! Bienvenido al sistema de venta de autos, por favor ingrese su nombre"
 );
@@ -36,7 +36,7 @@ let userAmount = parseFloat(
 if (isNaN(userAmount) || userAmount == "null" || userAmount == "") {
  // do {
    // userAmount = prompt("Por favor, ingrese solo numeros!");
-  /*}*/while (isNaN(userAmount) || userAmount == "null" || userAmount == "");
+  while (isNaN(userAmount) || userAmount == "null" || userAmount == "");
   userAmount = prompt("Por favor, ingrese solo numeros!");
   console.log("Su monto es =" + userAmount);
 } else {
@@ -150,4 +150,123 @@ break;
     console.log("opcion = " + opciones )
 
     comprar(opciones);
+*/
 
+// PROBANDO OBJ & CLASS
+
+/*class Camera {
+  constructor(marca, modelo, precio) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.precio = precio;
+  }
+  getMarca() {
+    return this.marca;
+  }
+  getModelo() {
+    return this.modelo;
+  }
+  getPrecio() {
+    return this.precio;
+  }
+}
+
+const camera1 = new Camera("Canon", "EOS RP", 1500);
+console.log(camera1.getPrecio());
+console.log(camera1.getModelo());*/
+
+//Segunda Entrega
+
+let camaras = [
+  { marca: "NIKON", modelo: "D7000", precio: 1600 },
+  { marca: "CANON", modelo: "EOS R", precio: 2000 },
+  { marca: "SONY", modelo: "a7", precio: 1400 },
+];
+
+/*console.log(camaras);
+let preciosConIVA = camaras.map((unaCamara) => {
+  return { ...unaCamara, precio: unaCamara.precio * 1.21 };
+});
+console.log(preciosConIVA);
+let = camaras.forEach((mar) => {
+  return console.log(mar.marca);
+});
+let fillter = preciosConIVA.filter((fillter) => {
+  return fillter.precio >= 1800;
+});
+console.log("--> estas son las camaras q salen 2000 o mas", fillter);
+*/
+var condition = false;
+let firstAnswer;
+do {
+  firstAnswer = prompt(
+    "¿Ustéd desea comprar una cámara? Presione 1 si la respuesta es 'si', presione 2 si la respuesta es 'no'"
+  );
+  if (firstAnswer !== "1" && firstAnswer !== "2") {
+    condition = false;
+  } else {
+    condition = true;
+  }
+} while (condition === false);
+
+if (firstAnswer === "1") {
+  let secondAnswer = prompt("¿Qué marca de cámara le interesa?").toUpperCase();
+  let finded = camaras.find((elemento) => {
+
+    return elemento.marca === secondAnswer;
+  });
+    if(finded==undefined){
+      console.log("no poseemos esa camara");
+    }
+   
+  
+  console.log(
+    "Tenemos disponible la marca de cámara que deseas, los modelos son los siguientes: ",
+    finded.modelo
+  );
+  var condition = false;
+  let thirdAnswer;
+  do {
+    thirdAnswer = prompt(
+      "Presione 1 para ver el precio de la camara, 2 para ver el precio de la camara con IVA, 3 para salir"
+    );
+    if (thirdAnswer !== "1" && thirdAnswer !== "2" && thirdAnswer !== "3") {
+      condition = false;
+    } else {
+      condition = true;
+    }
+  } while (condition === false);
+  switch (thirdAnswer) {
+    case "1":
+      console.log("El precio de la cámara sin IVA es: $" + finded.precio);
+
+      break;
+
+    case "2":
+      let precioIva = camaras.map((unaCamara) => {
+        return { ...unaCamara, precio: unaCamara.precio * 1.21 };
+      });
+      let selected = precioIva.find((elemento) => {
+        return elemento.marca === secondAnswer;
+      });
+
+      console.log("El precio de la cámara con IVA es: $" + selected.precio);
+
+      break;
+
+      case "3": console.log("gracias por su consulta!");
+      break;
+      
+  }
+  
+  /*if(finded(secondAnswer)!==undefined)
+  {
+    console.log("el resultado es", finded.marca);
+  }
+  else{
+    console.log("no poseemos esa marca de cámara");
+  }
+}*/
+}
+if (firstAnswer === "2") {
+}
