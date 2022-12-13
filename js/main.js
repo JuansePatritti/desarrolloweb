@@ -152,8 +152,11 @@ break;
     comprar(opciones);
 */
 
-// PROBANDO OBJ & CLASS
 
+//Segunda Entrega
+
+
+// PROBANDO OBJ & CLASS
 /*class Camera {
   constructor(marca, modelo, precio) {
     this.marca = marca;
@@ -175,7 +178,7 @@ const camera1 = new Camera("Canon", "EOS RP", 1500);
 console.log(camera1.getPrecio());
 console.log(camera1.getModelo());*/
 
-//Segunda Entrega
+
 
 let camaras = [
   { marca: "NIKON", modelo: "D7000", precio: 1600 },
@@ -184,14 +187,15 @@ let camaras = [
 ];
 
 console.log(camaras);
+let marcasDisp= camaras.forEach((mar) => {
+  return console.log("las marcas disp son: ",mar.marca);
+});
 /*
 let preciosConIVA = camaras.map((unaCamara) => {
   return { ...unaCamara, precio: unaCamara.precio * 1.21 };
 });
 console.log(preciosConIVA);
-let = camaras.forEach((mar) => {
-  return console.log(mar.marca);
-});
+
 let fillter = preciosConIVA.filter((fillter) => {
   return fillter.precio >= 1800;
 });
