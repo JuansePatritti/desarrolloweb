@@ -182,8 +182,13 @@ console.log(camera1.getModelo());*/
 
 let camaras = [
   { marca: "NIKON", modelo: "D7000", precio: 1600 },
-  { marca: "CANON", modelo: "EOS R", precio: 2000 },
+  { marca: "CANON", modelo: "EOS RP", precio: 2000 },
   { marca: "SONY", modelo: "a7", precio: 1400 },
+  { marca: "SONY", modelo: "a8", precio: 2800 },
+  { marca: "SONY", modelo: "a10", precio: 3000 },
+  { marca: "SONY", modelo: "a12", precio: 3200 },
+  { marca: "SONY", modelo: "a14", precio: 4000 },
+  { marca: "CANON", modelo: "EOS R", precio: 2500 },
 ];
 
 console.log(camaras);
@@ -216,22 +221,46 @@ do {
 
 if (firstAnswer === "1") {
   let secondAnswer = prompt("¿Qué marca de cámara le interesa?").toUpperCase();
-  let finded = camaras.find((elemento) => {
+
+  let filtered = camaras.filter((elemento => {
 
     return elemento.marca === secondAnswer;
-  });
-    if(finded==undefined){
-      console.log("no poseemos esa camara");
-    }
+  }));
+  console.log(filtered);
    
   
-  console.log(
-    "Tenemos disponible la marca de cámara que deseas, los modelos son los siguientes: ",
-    finded.modelo
+  for (let index = 0; index < filtered.length; index++) {
+    const element = filtered[index];
+
+    console.log(
+    "Tenemos disponible la marca de cámara que deseas, el modelo "+ parseInt(index+1) +" es:", 
+    filtered[index].modelo
   );
+  }
+  console.log(filtered.length);
+ 
+  if(filtered.length>1){
+    var condition = false;
+    for (let i = 0; i < filtered.length; i++) {
+      const element = filtered[i];}
+  let fourthAnswer;
+    fourthAnswer = prompt(
+      "elija la opc para ver el precio: ")
+      console.log("el precio con IVA, es de: ",filtered[parseInt(fourthAnswer)-1].precio*1.21)
+    
+  }
+     
+    else{
+
+  
+   let thirdAnswer; 
   var condition = false;
-  let thirdAnswer;
-  do {
+  if(filtered.length===0){
+      console.log("no poseemos esa camara");
+      thirdAnswer= 5
+      
+    }
+  else  do {
     thirdAnswer = prompt(
       "Presione 1 para ver el precio de la camara, 2 para ver el precio de la camara con IVA, 3 para salir"
     );
@@ -243,7 +272,7 @@ if (firstAnswer === "1") {
   } while (condition === false);
   switch (thirdAnswer) {
     case "1":
-      console.log("El precio de la cámara sin IVA es: $" + finded.precio);
+      console.log("El precio de la cámara sin IVA es: $" + filtered.precio);
 
       break;
 
@@ -262,7 +291,7 @@ if (firstAnswer === "1") {
       case "3": console.log("gracias por su consulta!");
       break;
       
-  }
+  }}
   
   /*if(finded(secondAnswer)!==undefined)
   {
@@ -272,6 +301,10 @@ if (firstAnswer === "1") {
     console.log("no poseemos esa marca de cámara");
   }
 }*/
-}
+
 if (firstAnswer === "2") {
 }
+
+//prueba
+}
+
