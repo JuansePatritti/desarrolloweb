@@ -386,32 +386,32 @@ products.forEach((product)=>{
     <div class="card-body">
       <h5 class="card-title">${product.marca.toUpperCase() + " " + product.modelo.toUpperCase()}</h5>
       <p class="card-text">Precio: U$D ${product.precio}</p>
-      <button class="btn btn-primary" onclick="addProduct(${product.id})">Agregar al carrito</button>
+      <button class="btn btn-primary se" onclick="addProduct(${product.id})">Agregar al carrito</button>
     </div>
   </div>
   `
   allProducts.append(content)
 })
-let addCard=[] 
+let addCart=[] 
 
 document.addEventListener("DOMContentLoaded",()=>{
-  addCard=JSON.parse(localStorage.getItem("card")) || []
-  showCard()
+  addCart=JSON.parse(localStorage.getItem("cart")) || []
+  showCart()
 })
 
 function addProduct(id){
  
  let addItem= products.find((aProd)=>
   aProd.id===id)
-  addCard.push(addItem)
-  console.log(addCard);
-  showCard()
+  addCart.push(addItem)
+  console.log(addCart);
+  showCart()
  }
 
- const showCard= ()=>{
+ const showCart= ()=>{
   const modalBody=document.querySelector(".modal .modal-body")
     modalBody.innerHTML=" "
-addCard.forEach((prod)=>{
+addCart.forEach((prod)=>{
  const {marca, modelo,precio, categoria, id, img} = prod
   modalBody.innerHTML +=
 `
@@ -433,12 +433,12 @@ addCard.forEach((prod)=>{
  
 
  }) 
- if (addCard.length=="" && null && 0 && undefined &&[]) {
+ if (addCart.length=="" && null && 0 && undefined &&[]) {
   
  }
- cardQ=addCard.length
- console.log(cardQ);
- if (cardQ==0) {
+ cartQ=addCart.length
+ console.log(cartQ);
+ if (cartQ==0) {
  
    modalBody.innerHTML =
     `<div class="modal-body">
@@ -451,24 +451,49 @@ saveStorage()
  }
  function removeProduct(id){
   const idItem=id
-  addCard=addCard.filter((item)=>item.id!==idItem)
-console.log(addCard);
-showCard()
+  addCart=addCart.filter((item)=>item.id!==idItem)
+console.log(addCart);
+showCart()
 saveStorage()
  }
  function saveStorage(){
-  localStorage.setItem("card", JSON.stringify(addCard))
+  localStorage.setItem("cart", JSON.stringify(addCart))
  }
- function emptyCard(){
-  addCard.length=[]
+ function emptyCart(){
+  addCart.length=[]
   saveStorage()
-  showCard()
+  showCart()
 
-  console.log(addCard);
+  console.log(addCart);
+ }
+ function productSearch(){
+let inputValue= document.querySelector("#inputSearch").value;
+products.filter((product)=>{
+  if(inputValue==product.modelo||inputValue===product.marca)
+console.log("encontrado");})
+
  }
 
+let toastify=document.querySelectorAll('.se').forEach(btn => {
+  btn.addEventListener('click', () => {
+       Toastify({
+  text: "A product has been added",
+  duration: 3000,
+  destination: "https://github.com/apvarun/toastify-js",
+  newWindow: true,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "right", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #555555,#000000)",
+  },
+  onClick: function(){} // Callback after click
+}).showToast()
+  });
+});
 
-// let card= new Order()
+// let cart= new Order()
 // let acumulable=0;
 
 
