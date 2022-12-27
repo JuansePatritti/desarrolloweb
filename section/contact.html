@@ -73,7 +73,51 @@
     </div>
     <body>
         <div class="contenidogral contenidogral__contact">
-            <h1 class="badge text-bg-dark">Contacto</h1>
+          
+            <div class="navbar bg-dark container-fluid" id="searchbar">
+              <div class="search">
+            <a class="navbar-brand text-white">Card</a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+                
+            </form>
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Shop
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title text-dark fs-5" id="exampleModalLabel">Tu carrito</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      El carrito está vacío
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button onclick="emptyCard()" type="button" class="btn btn-danger">Vaciar carrito</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          </div>
+          
+            <div id= "shopContent" class="purchase">
+              <!-- <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../img/pngfind.com-vlog-camera-png-6754689.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Canon Eos RP</h5>
+                  <p class="card-text">Canon Eos RP - BODY</p>
+                  <a onclick="purchaseItem()" href="#" id="btn_canonrp" class="purcharsebtn btn btn-primary">Add to card</a> -->
+                </div>
+              </div>
+            </div>
             
         </div>
         <div class="segundocontainer segundocontainer__contact">

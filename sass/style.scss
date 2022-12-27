@@ -135,7 +135,9 @@ p {
   border-top: 1px solid $black;
 }
 .input-group
-  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+    .valid-feedback
+  ):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -222,6 +224,46 @@ label {
   gap: 2em;
   padding: 2em;
   background-color: $white;
+}
+.purchase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  padding: 1em;
+  padding-bottom: 2em;
+  justify-items: center;
+  align-items: center;
+}
+.card-body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.card-img-top {
+  padding: 2em;
+}
+
+.search {
+  FONT-WEIGHT: 100;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 1em;
+  margin-right: 1em;
+  justify-items: center;
+  align-items: stretch;
+  gap: 1.5em;
+}
+#searchbar{
+  justify-content: center;
+}
+.img-shop{
+  width:  200px;
+padding: 2em;
+}
+.modal-contenedor{
+  display: flex;
+  align-items: center;
+  gap:2em;
 }
 /* ------------------------------------------------------------ COMIENZA EL FOOTER ---------------------------------------------------------- */
 
@@ -318,7 +360,24 @@ footer {
     justify-items: center;
     align-items: center;
   }
-
+.purchase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  padding: 1em;
+  padding-bottom: 2em;
+  justify-items: center;
+  align-items: center;
+}
+.search{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 3em;
+  margin-right: 3em;
+  justify-items: center;
+  align-items: stretch;
+  gap:3em
+}
   /* ------------------------------------------------------------ SECTION MARKETING ------------------------------------------------------------ */
 
   .wrap__mkt {
