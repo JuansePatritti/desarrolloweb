@@ -78,11 +78,11 @@
             <div class="navbar bg-dark container-fluid" id="searchbar">
               <div class="search">
             <a class="navbar-brand text-white">Cart</a>
-            <form class="d-flex" role="search">
+            <!-- <form class="d-flex" role="search">
               <input class="form-control me-2" id="inputSearch" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" onclick="productSearch()" type="button">Search</button>
                 
-            </form>
+            </form> -->
             <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Shop
             </button>
@@ -99,8 +99,10 @@
                       El carrito está vacío
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <p type="text" class="alert alert-info" id="precioTotal"> </p>
+                    <button id="closeButton" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button onclick="emptyCart()" type="button" class="btn btn-danger">Vaciar carrito</button>
+                    <button onclick="finishOrder()" id="confirm" type="button" class="btn btn-warning d-none">Confirmar pedido</button>
                   </div>
                 </div>
               </div>
@@ -110,17 +112,15 @@
           </div>
           
             <div id= "shopContent" class="purchase">
-              <!-- <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="../img/pngfind.com-vlog-camera-png-6754689.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Canon Eos RP</h5>
-                  <p class="card-text">Canon Eos RP - BODY</p>
-                  <a onclick="purchaseItem()" href="#" id="btn_canonrp" class="purcharsebtn btn btn-primary">Add to card</a> -->
+          
                 </div>
+                <div id= "shopContento" class="purchase">
+            
+                    </div>
               </div>
             </div>
             
-        </div>
+        </div>r
         <div class="segundocontainer segundocontainer__contact">
           <img src="../img/telep.jpg" alt="me_working2" class="img__quiensoy">
               <form class="row g-3">
@@ -168,13 +168,15 @@
         </div>
        <script src="../js/main.js">
        </script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 <footer>
     <div class="footer">
       <p class="derechos">Copyright © 2018-2022 Juanse Patritti Ph, SRL - Derechos de imágenes reservados</p>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 
 </html>

@@ -1,0 +1,72 @@
+[{
+"cantidad":1,
+"marca" : "canon",
+"modelo" : "eos rp",
+"precio" : 1200,
+"id":1,
+"categoria": "cameraCategory",
+"img":"../img/img_canonrp.png"  
+
+
+},
+{
+    "cantidad":1,
+    "marca" : "canon",
+    "modelo" : "eos r",
+    "precio" : 1600,
+    "id":2,
+    "categoria": "cameraCategory",
+    "img":"../img/img_canonrp.png"  
+    
+    },
+{
+"cantidad":1,
+"marca" : "sony",
+"modelo" : "a7",
+"precio" : 1400,
+"id":3,
+"categoria": "cameraCategory",
+"img":"../img/img_canonrp.png"  
+
+},
+{
+    "cantidad":1,
+    "marca" : "sony",
+    "modelo" : "a5",
+    "precio" : 1100,
+    "id":4,
+    "categoria": "cameraCategory",
+    "img":"../img/img_canonrp.png"  
+    
+    },
+{
+"cantidad":1,
+"marca" : "nikon",
+"modelo" : "d7500",
+"precio" : 1600,
+"id":5,
+"categoria": "cameraCategory",
+"img":"../img/img_canonrp.png"  
+
+},
+{
+"cantidad":1,
+"marca" : "nikon",
+"modelo" : "d5600",
+"precio" : 1200,
+"id":6,
+"categoria": "cameraCategory",
+"img":"../img/img_canonrp.png"  
+
+},
+{
+"cantidad":1,
+"marca" : "fuji",
+"modelo" : "xt4",
+"precio" : 1300,
+"id":3,
+"categoria": "cameraCategory",
+"img":"../img/img_canonrp.png"  
+
+} 
+  ]
